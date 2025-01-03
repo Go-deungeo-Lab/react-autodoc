@@ -10,5 +10,10 @@ export interface ComponentDoc {
     name: string;
     description?: string;
     props: PropDefinition[];
-    examples?: string[];
+    examples: CodeExample[];
+}
+
+export interface CodeExample {
+    code: string;
+    description?: string;
 }

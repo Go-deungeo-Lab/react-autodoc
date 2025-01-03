@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentDoc } from '../../types';
 import { PropTable } from './PropTable';
+import { ComponentPreview } from './ComponentPreview';
 
 interface DocumentViewerProps {
     component: ComponentDoc;
@@ -13,6 +14,17 @@ export const DocumentViewer: React.FC<DocumentViewerProps> = ({ component }) => 
             {component.description && (
                 <p className="text-gray-600 mb-6">{component.description}</p>
             )}
+
+            {/* Examples Section */}
+            {component.examples.map((example, index) => (
+                <ComponentPreview
+                    key={index}
+                    component={component}
+                    code={example.code}
+                />
+            ))}
+
+            {/* Props Table */}
             <PropTable props={component.props} />
         </div>
     );

@@ -33,4 +33,18 @@ export const sampleComponent: ComponentDoc = {
             description: 'Function called when the button is clicked',
         },
     ],
+    examples: [
+        {
+            code: `
+<Button 
+  variant="primary" 
+  size="medium" 
+  onClick={() => alert('Button clicked!')}
+>
+  Click me
+</Button>`,
+            description: 'Basic button example'
+        }
+    ]
+
 };
