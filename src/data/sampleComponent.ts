@@ -1,4 +1,4 @@
-// 테스트를 위한 샘플데이터 (삭제 예정 !!)
+// 테스트용 샘플데이터 삭제예정
 import { ComponentDoc } from '../types';
 
 export const sampleComponent: ComponentDoc = {
@@ -35,10 +35,9 @@ export const sampleComponent: ComponentDoc = {
     ],
     examples: [
         {
-            code: `
-<Button 
-  variant="primary" 
-  size="medium" 
+            code: `<Button
+  variant="primary"
+  size="medium"
   onClick={() => alert('Button clicked!')}
 >
   Click me
@@ -46,5 +45,4 @@ export const sampleComponent: ComponentDoc = {
             description: 'Basic button example'
         }
     ]
-
 };
